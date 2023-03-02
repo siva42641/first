@@ -3,10 +3,10 @@ def COLOR_MAP = [
     'FAILURE': 'danger',
 ]
 pipeline {
-    agent any
+    agent {label 'master'}
     tools {
-        maven "MAVEN3"
-        jdk "OracleJDK8"
+        maven "maven3"
+        jdk "oraclejdk8"
     }
     
     environment {
